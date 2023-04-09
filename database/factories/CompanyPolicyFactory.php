@@ -17,7 +17,7 @@ class CompanyPolicyFactory extends Factory
      */
     public function definition()
     {
-        $policytype = ['Health', 'Life', 'Bike', 'Car'];
+        $policytype = ['Electronics', 'Sports', 'Assessiries', 'Other'];
         $a = $this->faker->numberBetween(0, 3);
         return [
             // 'companyid'(

@@ -42,10 +42,10 @@ Route::post('/updateUser/{id?}',[UserController::class,'_update'])->name('update
 Route::get('/deleteUser/{id?}', [UserController::class, '_delete'])->name('deleteUser');
 
 
-Route::get('/item-Category1', [InsuranceController::class, '_life']);
-Route::get('/item-Category2', [InsuranceController::class, '_health']);
-Route::get('/item-Category3', [InsuranceController::class, '_car']);
-Route::get('/item-Category4', [InsuranceController::class, '_bike']);
+Route::get('/Sports', [InsuranceController::class, '_life']);
+Route::get('/Electronic', [InsuranceController::class, '_health']);
+Route::get('/Assessiries', [InsuranceController::class, '_car']);
+Route::get('/Other', [InsuranceController::class, '_bike']);
 Route::get('/riskAnalysis',[VichelesController::class,'_riskanalysis'])->name('riskAnalysis');
 Route::post('/riskAnalysis',[VichelesController::class,'_risk'])->name('riskAnalysis');
 Route::get('/riskAnalysisVehicle',[VichelesController::class,'_riskAnalysisVehicle'])->name('riskAnalysisVehicle');

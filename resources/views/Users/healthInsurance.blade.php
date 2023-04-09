@@ -1,6 +1,6 @@
 @extends('Layout.master')
 @section('title')
-Category 2
+Electronic
 @endsection
 @section('section')
 
@@ -8,7 +8,7 @@ Category 2
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
 <div class="container">
     <center>
-        <h1 class="custom">Category 2 </h1>
+        <h1 class="custom">Electronic</h1>
     </center>
     <div class="table-responsive">
 

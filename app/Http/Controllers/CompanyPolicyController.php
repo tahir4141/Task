@@ -33,7 +33,7 @@ class CompanyPolicyController extends Controller
     {
         $validators = $request->validate(
             [
-                'policyname' => 'required|regex:/^[a-zA-Z\s]+$/',
+                'policyname' => 'required',
                 'policytype' => 'required',
                 'p_desc' => 'required',
                 'p_price' => 'required|numeric|min:500',
@@ -99,7 +99,7 @@ class CompanyPolicyController extends Controller
     public function _update(Request $request){
         $validators = $request->validate(
             [
-                'policyname' => 'required|regex:/^[a-zA-Z\s]+$/',
+                'policyname' => 'required',
                 'policytype' => 'required',
                 'p_desc' => 'required',
                 'p_price' => 'required|numeric|min:500',

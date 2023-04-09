@@ -1,6 +1,6 @@
 @extends('Admin.master')
 @section('title')
-Add Policy
+update product
 @endsection
 @section('section')
 @include('Company.style')
@@ -13,7 +13,7 @@ Add Policy
             <!-- form contact -->
             <div class="card card-outline-secondary">
                 <div class="card-header">
-                    <h3 class="mb-0">Update Policy </h3>
+                    <h3 class="mb-0">Update Product </h3>
                 </div>
                 <div class="card-body">
                     @if(Session::has('success'))
@@ -44,7 +44,7 @@ Add Policy
                             </div>
                             @enderror
 
-                            <label class="mb-0" for="policyname">Policy Name</label>
+                            <label class="mb-0" for="policyname">Product Name</label>
                             <div class="row mb-1">
                                 <div class="col-lg-12">
                                     <input class="form-control" name="policyname" type="text" value="{{  $policy['policyname'] ?? old('policyname') }}">
@@ -56,26 +56,25 @@ Add Policy
                                 {{ $message }}
                             </div>
                             @enderror
-                            <label class="mb-0" for="policytype">Policy Type</label>
+                            <label class="mb-0" for="policytype">Procuct Type</label>
                             <div class="row mb-1">
                                 <div class="col-lg-12">
-                                    <select class="form-control" name="policytype" value="{{ $policy['policytype'] ?? old('policytype') }}" placeholder="Select Policy">
-                                        <option class="form-control" value="">Select Insurance</option>
-                                        <option class="form-control" value="Health">Health</option>
-                                        <option class="form-control" value="Life">Life</option>
-                                        <option class="form-control" value="Bike">Bike</option>
-                                        <option class="form-control" value="Car">Car</option>
+                                    <select class="form-control" name="policytype" placeholder="Select Policy">
+                                        <option class="form-control" value="">Procuct Category</option>
+                                        <option class="form-control" value="Electronics">Electronics</option>
+                                        <option class="form-control" value="Sports">Sports</option>
+                                        <option class="form-control" value="Assessiries">Assessiries</option>
+                                        <option class="form-control" value="Other">Other</option>
                                     </select>
                                 </div>
                             </div>
-
                             @error('p_desc')
                             <div class="alert alert-danger" role="alert">
                                 {{ $message }}
                             </div>
                             @enderror
 
-                            <label class="mb-0" for="p_desc">Policy Desc</label>
+                            <label class="mb-0" for="p_desc">Product Desc</label>
                             <div class="row mb-1">
                                 <div class="col-lg-12">
                                     <input name="p_desc" class="form-control" type="text" value="{{ $policy['p_desc'] ?? old('p_desc') }}">
@@ -89,7 +88,7 @@ Add Policy
                             </div>
                             @enderror
 
-                            <label class="mb-0" for="p_price">Policy Price</label>
+                            <label class="mb-0" for="p_price">Product Selling Price</label>
                             <div class="row mb-1">
                                 <div class="col-lg-12">
                                     <input name="p_price" class="form-control" type="number" min="0" value="{{ $policy['p_price'] ?? old('p_price') }}">
@@ -103,7 +102,7 @@ Add Policy
                             </div>
                             @enderror
 
-                            <label class="mb-0" for="c_price">Claim Price</label>
+                            <label class="mb-0" for="c_price">Product Actual Price</label>
                             <div class="row mb-1">
                                 <div class="col-lg-12">
                                     <input name="c_price" class="form-control" type="number" min="0" value="{{ $policy['c_price'] ?? old('c_price') }}">
@@ -117,14 +116,14 @@ Add Policy
                             </div>
                             @enderror
 
-                            <label class="mb-0" for="policy_period">Month Duration </label>
+                            <label class="mb-0" for="policy_period">Warranty Month Duration </label>
                             <div class="row mb-1">
                                 <div class="col-lg-12">
                                     <input name="policy_period" class="form-control" type="number" value="{{ $policy['policy_period'] ?? old('policy_period') }}">
                                 </div>
                             </div>
                             <br>
-                            <button class="btn btn-secondary btn-lg float-right" type="submit">Update Policy</button>
+                            <button class="btn btn-secondary btn-lg float-right" type="submit">Update Product</button>
                             <br>
                         </fieldset>
                     </form>
